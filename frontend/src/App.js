@@ -168,6 +168,9 @@ function App() {
             <strong>Become a Seller</strong>
           </button>
           )}
+          <button id="becomeseller" className="primary" type="submit" onClick={besellerHandler}>
+            <strong>Donate Food</strong>
+          </button>
           {userInfo && !userInfo.isAdmin && !userInfo.isSeller && (
             <Link to="/cart">
             Cart
