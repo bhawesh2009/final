@@ -76,7 +76,7 @@ export default function SigninScreen(props) {
           <button className="primary" type="submit">
             Sign In
           </button>
-          <p>By signing-in, you agree to the Tiffin cards Conditions of Use and Privacy Notice. 
+          <p>By signing-in, you agree to the Sahulat Store's Conditions of Use and Privacy Notice. 
               Please see our Privacy Notice, our Cookies Notice and our interest Based Ads Notice.
 
           </p>

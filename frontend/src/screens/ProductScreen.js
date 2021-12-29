@@ -48,7 +48,7 @@ export default function ProductScreen(props) {
     e.preventDefault();
     if (comment && rating) {
       dispatch(
-        createReview(productId, { rating, comment, name: userInfo.name })
+        createReview(productId, { rating, comment, name:  userInfo.name})
       );
     } else {
       alert("Please enter comment and rating");

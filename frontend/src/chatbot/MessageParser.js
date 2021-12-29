@@ -10,10 +10,10 @@ class MessageParser {
       if (lowercase.includes("hello") || lowercase.includes("hey")) {
         this.actionProvider.greet();
       }
-      if (lowercase.includes("Rajsthani") || lowercase.includes("Rajsthani")) {
+      if (lowercase.includes("clothing") || lowercase.includes("clothes")) {
         this.actionProvider.Clothing();
       }
-      if (lowercase.includes("Gujrati") || lowercase.includes("Tiffin")) {
+      if (lowercase.includes("accessories") || lowercase.includes("Acc")) {
         this.actionProvider.Accessories();
       }
       if (lowercase.includes("others") || lowercase.includes("other")) {

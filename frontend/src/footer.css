@@ -1,5 +1,5 @@
 .footer-container {
-  min-height: 100%;
+  min-height: 50%;
 }
 footer {
   grid-area: footer;
@@ -42,7 +42,7 @@ header p {
 }
 
 .footer > * {
-  flex: 1 100%;
+  flex: 1 200%;
 }
 
 .l-footer {

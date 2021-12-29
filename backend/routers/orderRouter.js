@@ -1,7 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import Order from '../models/orderModel.js';
-import { isAuth,isAdmin, isSellerOrAdmin } from '../utils.js';
+import { isAuth,isAdmin,isSeller, isSellerOrAdmin } from '../utils.js';
 import Product from '../models/productModel.js';
 import User from '../models/userModel.js';
 const orderRouter = express.Router();
@@ -11,6 +11,7 @@ orderRouter.get(
   '/summary',
   isAuth,
   isAdmin,
+  isSeller,
   expressAsyncHandler(async (req, res) => {
     const orders = await Order.aggregate([
       {

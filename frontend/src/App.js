@@ -37,6 +37,7 @@ import MessageBox from './components/MessageBox';
 import DashboardScreen from './screens/DashboardScreen';
 import logo from './SahulatLOGO.png';
 import UserRoute from './components/UserRoute';
+import SellerDashboardScreen from './screens/SellerDashboardScreen';
 
 //hey
 function App() {
@@ -61,7 +62,7 @@ function App() {
 
   const besellerHandler=()=>{
     dispatch(beseller(userInfo));
-    alert("Kindly Relogin to access your seller portal")
+    alert("Kindly Relogin to access your seller portal!")
     dispatch(signout());
   }
   const [showChatbot, toggleChatbot] = useState(false);
@@ -95,7 +96,7 @@ function App() {
           <button
           className="app-chatbot-button"
           onClick={() => toggleChatbot((prev) => !prev)}
-        ><div className="Strongbot">Suwad Tiffin Card</div></button>
+        ><div className="Strongbot">suwad bot</div></button>
         </div>
       </header>
     </div>
@@ -117,7 +118,7 @@ function App() {
           <button
           className="app-chatbot-button"
           onClick={() => toggleChatbot((prev) => !prev)}
-        ><div className="Strongbot">Suwad Tiffin Card</div></button>
+        ><div className="Strongbot">Sawad tiffin Bot</div></button>
         </div>
       </header>
     </div>
@@ -130,20 +131,20 @@ function App() {
         
          {userInfo && !userInfo.isAdmin && !userInfo.isSeller && (
            
-              <Link className="brand" to="/"> Healthy Meal Tiffin</Link>
+              <Link className="brand" to="/"> Sawad Tiffn</Link>
          )}
          
          {!userInfo && (
-         <Link className="brand" to="/"> Healthy Meal Tiffin</Link>
+         <Link className="brand" to="/"> Sawad Tiffn</Link>
          )}
          {!userInfo && (
           <a href="/"><i className="fa fa-home" aria-hidden="true"></i></a>
          )}
          {userInfo && userInfo.isAdmin && (
-           <Link className="brand"> Healthy Meal Tiffine</Link>
+           <Link className="brand"> Sawad Tiffn</Link>
          )}
          {userInfo && userInfo.isSeller && (
-           <Link className="brand"> Healthy Meal Tiffin</Link>
+           <Link className="brand"> Sawad Tiffn</Link>
          )}
          {userInfo && !userInfo.isAdmin && !userInfo.isSeller && (
            <a href="/"><i className="fa fa-home" aria-hidden="true"></i></a> 
@@ -168,9 +169,6 @@ function App() {
             <strong>Become a Seller</strong>
           </button>
           )}
-          <button id="becomeseller" className="primary" type="submit" onClick={besellerHandler}>
-            <strong>Donate Food</strong>
-          </button>
           {userInfo && !userInfo.isAdmin && !userInfo.isSeller && (
             <Link to="/cart">
             Cart
@@ -220,6 +218,9 @@ function App() {
                   Seller <i className="fa fa-caret-down"></i>
                 </Link>
                 <ul className="dropdown-content">
+                <li>
+                    <Link to="/sellerdashboard">Seller Dashbard</Link>
+                  </li>
                   <li>
                     <Link to="/productlist/seller">Products</Link>
                   </li>
@@ -384,6 +385,9 @@ function App() {
             component={ProductListScreen}
             exact
           ></AdminRoute>
+          
+          
+          
           <SellerRoute
             path="/productlist/seller"
             component={ProductListScreen}
@@ -392,6 +396,8 @@ function App() {
             path="/orderlist/seller"
             component={OrderListScreen}
           ></SellerRoute>
+          <SellerRoute path="/sellerdashboard" component={SellerDashboardScreen} />
+
       </main>
       {/* <footer className="row center">All right reserved</footer> */}
       <div className="outsidebacktotop">
@@ -409,9 +415,9 @@ function App() {
           </div>
           </h1>
           <p>
-          Suwad Tiffin card is for Tiffin  (Health food) Indian market. 
+           e-commerce market. 
           Our vision is to provide a safe, efficient online marketplace platform for vendors and 
-          customers across the country to come together. Tiffin cards prides itself on not being 
+          customers across the country to come together. Sahulat Store prides itself on not being 
           just another ecommerce venture in Asia. We work tirelessly to make sure that we provide 
           users with the best online online shopping experience and value for their purchases. 
           </p>
@@ -459,7 +465,7 @@ function App() {
         </ul>
         <div className="b-footer">
         <p>
-        All rights reserved by ©Suwad Tiffin Card 2022 </p>
+        All rights reserved by ©SahulatStore 2020 </p>
         </div>
     </footer>
     </div>

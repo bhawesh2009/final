@@ -5,16 +5,16 @@ import "./Options.css";
 const Options = (props) => {
   const options = [
     {
-      text: "Rajsthani Tiffin",
+      text: "Accessories",
       handler: props.actionProvider.Accessories,
       id: 1,
     },
     { 
-      text: "Gujrati Tiffin", 
+      text: "Clothing", 
       handler: props.actionProvider.Clothing, 
       id: 2 },
     { 
-      text: "Other Tiffin", 
+      text: "Other", 
       handler: props.actionProvider.Other, 
       id: 3 },
   ];
